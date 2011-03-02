@@ -1,0 +1,2 @@
+Speedtrain is intended to be a tiny web framework for Common Lisp,
+built on top of Mongrel2.
