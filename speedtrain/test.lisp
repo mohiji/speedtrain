@@ -15,7 +15,7 @@
     (maphash (lambda (key value)
                (push (list :name key :value value) params)) (request-query request))
     (with-output-to-string (s)
-      (html-template:fill-and-print-template #P"/Users/jfischer/Dropbox/Lisp/Projects/speedtrain/test.html"
+      (html-template:fill-and-print-template #P"/Users/jfischer/git/speedtrain/speedtrain/test.html"
                                              (list :path (request-path request)
                                                    :query params
                                                    :body (request-body request)

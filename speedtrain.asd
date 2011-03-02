@@ -11,11 +11,12 @@
   :description "Tiny web framework, built on Mongrel2"
   :depends-on (:split-sequence :zeromq :st-json :html-template :cl-ppcre)
   :serial t
-  :components ((:file "package")
-               (:file "cookies")
-               (:file "http")
-               (:file "mongrel2")
-               (:file "request")
-               (:file "test")))
+  :components ((:module "speedtrain"
+                        :components ((:file "package")
+                                     (:file "cookies")
+                                     (:file "http")
+                                     (:file "mongrel2")
+                                     (:file "request")
+                                     (:file "test")))))
 
 
