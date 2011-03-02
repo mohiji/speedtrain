@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Violently Shaking Speedtrain!</title>
+    <link href='http://fonts.googleapis.com/css?family=IM+Fell+English' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+      }
+
+      pre {
+        font-family: courier;
+      }
+      
+      table {
+        width: 100%;
+      }
+
+      th {
+        text-align: left;
+      }
+
+      td {
+        font-family: courier;
+      }
+
+      .left_column {
+        width: 150px;
+      }
+
+    </style>
+  </head>
+  
+  <body>
+    <h1>It's shaking violently!</h1>
+    <p>These are the values that were passed from Mongrel2:</p>
+
+    <h2>Path</h2>
+    <table>
+      <tr>
+        <th class="left_column">path</th>
+        <td><!-- TMPL_VAR path --></td>
+      </tr>
+    </table>
+
+    <h2>Query Parameters</h2>
+    <table>
+      <tr>
+        <th class="left_column">Name</th>
+        <th>Value</th>
+      </tr>
+      <!-- TMPL_LOOP query -->
+      <tr>
+        <td class="left_column"><!-- TMPL_VAR name --></td>
+        <td><!-- TMPL_VAR value --></td>
+      </tr>
+      <!-- /TMPL_LOOP -->
+    </table>
+    
+    <h2>Cookies</h2>
+    <table>
+      <tr>
+        <th class="left_column">Name</th>
+        <th>Value</th>
+      </tr>
+      <!-- TMPL_LOOP cookies -->
+      <tr>
+        <td class="left_column"><!-- TMPL_VAR name --></td>
+        <td><!-- TMPL_VAR value --></td>
+      </tr>
+      <!-- /TMPL_LOOP -->
+    </table>
+     
+    <h2>Headers</h2>
+    <table>
+      <tr>
+        <th class="left_column">Name</th>
+        <th>Value</th>
+      </tr>
+      <!-- TMPL_LOOP headers -->
+      <tr>
+        <td class="left_column"><!-- TMPL_VAR name --></td>
+        <td><!-- TMPL_VAR value --></td>
+      </tr>
+      <!-- /TMPL_LOOP -->
+     </table>
+
+    <h2>Body</h2>
+    <pre>
+      <!-- TMPL_VAR body -->
+    </pre>
+  </body>
+</html>
